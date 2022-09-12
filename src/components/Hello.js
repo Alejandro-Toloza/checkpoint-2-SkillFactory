@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Hello(){
+const Hello = () =>{
     return (<h1>Hola desde la carpeta components</h1>); 
 }
 
