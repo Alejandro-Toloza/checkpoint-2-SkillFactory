@@ -4,7 +4,7 @@ const RickAndMorty = () => {
     return (
         <div>
             <h1>Api Rick and Morty</h1>
-             <div class="container">
+             <div className="container">
             </div>
         </div>
 
