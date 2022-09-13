@@ -4,7 +4,7 @@ const ButtonRickAndMorty = () => {
     return (
         <div className='ButtonComponents'>
             <div>
-                <button type="button" className="btn" onclick="redirection2()">
+                <button type="button" className="btn" onclick={ButtonRickAndMorty}>
                 API Rick & Morty
                 </button>
             </div>
