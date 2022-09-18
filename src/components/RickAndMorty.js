@@ -1,12 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 const RickAndMorty = () => {
+
+    const url = 'https://rickandmortyapi.com/api/character';
+    const [characters, setTodos] = useState()
+    const fetchApi = async() => {
+      const response = await fetch(url)
+      const responseJSON = await response.json()
+      setTodos(responseJSON)
+    }    
+  
+    useEffect(() => {
+      fetchApi()
+    }, []);
+
     return (
-        <div>
-            <h1>Api Rick and Morty</h1>
-             <div className="container">
-            </div>
-        </div>
+        <div className='RickAndMorty'>
+        RickAndMorty
+        <ul>
+          { !characters ? 'Cargando...' :
+            characters.map((character,index)=>{
+              return <li>
+                {character.id}, {character.name}
+              </li>
+            })
+          }
+        </ul>
+      </div>
 
     );
 }
